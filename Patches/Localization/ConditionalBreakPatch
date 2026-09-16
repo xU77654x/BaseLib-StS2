@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Models;
 
 namespace BaseLib.Patches.Localization;
 
+[HarmonyPatch(typeof(MegaRichTextLabel), nameof(MegaRichTextLabel.SetTextAutoSize))]
 public static class ConditionalBreakPatch
 {
     public static void Prefix(MegaRichTextLabel __instance, ref string text)
